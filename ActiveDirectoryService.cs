@@ -14,7 +14,7 @@ namespace Novell.Directory.Ldap.Extensions
 			_config = config;
             _logger = logger;
 		}
-
+        
         public bool Validate(string username, string password)
         {
             var cn = new LdapConnection();
