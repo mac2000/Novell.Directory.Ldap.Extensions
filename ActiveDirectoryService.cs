@@ -43,7 +43,7 @@ namespace Novell.Directory.Ldap.Extensions
             }
         }
 
-        private LdapEntry GetEntry(string username)
+        public LdapEntry GetEntry(string username)
         {
             var cn = new LdapConnection();
             try
