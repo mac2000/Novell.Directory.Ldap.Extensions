@@ -8,8 +8,8 @@ namespace Novell.Directory.Ldap.Extensions
     public class ActiveDirectoryService
     {
         private readonly LdapConfig _config;
-        private readonly ILogger _logger;
-		public ActiveDirectoryService(LdapConfig config, ILogger logger)
+        private readonly ILogger<ActiveDirectoryService> _logger;
+		public ActiveDirectoryService(LdapConfig config, ILogger<ActiveDirectoryService> logger)
 		{
 			_config = config;
             _logger = logger;
