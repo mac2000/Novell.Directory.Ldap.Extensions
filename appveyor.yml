@@ -10,4 +10,8 @@ dotnet_csproj:
 build_script:
   - cmd: dotnet pack -c Release
 artifacts:
- - path: bin\Release\*.nupkg
+  - path: bin\Release\*.nupkg
+deploy:
+  provider: NuGet
+  api_key:
+    secure: ZGzY2yhZHhTVJztwUFsUO6UO+AVMNjE7VSucW1jYVXcn8/P2DoelsWFP8IUv/tbd
