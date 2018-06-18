@@ -5,9 +5,9 @@ branches:
   - master
 dotnet_csproj:
   patch: true
-  file: '**/*.csproj'
+  file: '**\*.csproj'
   version: '{version}'
 build_script:
   - cmd: dotnet pack -c Release
 artifacts:
- - path: bin/Release/*.nupkg
+ - path: bin\Release\*.nupkg
