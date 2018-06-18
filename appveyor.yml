@@ -3,15 +3,14 @@ image: Visual Studio 2017
 branches:
   only:
   - master
-init:
-  dotnet_csproj:
-    patch: true
-    file: '**\*.csproj'
-    version: '{version}'
-    package_version: '{version}'
-    assembly_version: '{version}'
-    file_version: '{version}'
-    informational_version: '{version}'
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
 build_script:
   - cmd: dotnet pack -c Release --version-suffix %APPVEYOR_REPO_BRANCH%
 artifacts:
