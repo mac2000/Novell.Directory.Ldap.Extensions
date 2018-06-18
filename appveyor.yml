@@ -5,13 +5,9 @@ branches:
   - master
 dotnet_csproj:
   patch: true
-  file: '**\*.csproj'
+  file: '**/*.csproj'
   version: '{version}'
-  package_version: '{version}'
-  assembly_version: '{version}'
-  file_version: '{version}'
-  informational_version: '{version}'
 build_script:
-  - cmd: dotnet pack -c Release --version-suffix %APPVEYOR_REPO_BRANCH%
+  - cmd: dotnet pack -c Release
 artifacts:
  - path: bin/Release/*.nupkg
